@@ -1,0 +1,566 @@
+
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>UFCD 9978 | E-learning</title>
+
+<style>
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: #f2f5f9;
+  color: #263648;
+}
+
+.dashboard {
+  max-width: 1100px;
+  margin: auto;
+  padding: 20px;
+}
+
+.hero {
+  background: linear-gradient(120deg,#173c59,#287c91);
+  color: white;
+  padding: 35px;
+  border-radius: 16px;
+  margin-bottom: 22px;
+}
+
+.hero small {
+  letter-spacing: 2px;
+  font-weight: bold;
+  color: #c9e7ee;
+}
+
+.hero h1 {
+  font-size: 30px;
+  margin: 12px 0;
+}
+
+.hero p { line-height: 1.6; }
+
+.info {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.info span {
+  background: #ffffff25;
+  padding: 9px 15px;
+  border-radius: 20px;
+  font-size: 13px;
+}
+
+.section-title {
+  margin: 25px 0 15px;
+  font-size: 20px;
+  color: #173c59;
+}
+
+.cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit,minmax(190px,1fr));
+  gap: 14px;
+  margin-bottom: 25px;
+}
+
+.card {
+  background: white;
+  padding: 20px;
+  border-radius: 12px;
+  border: 1px solid #e5eaf0;
+}
+
+.card .emoji { font-size: 27px; }
+.card h3 { margin: 12px 0 5px; }
+.card p { font-size: 13px; color: #718096; }
+
+.progress-box {
+  background: white;
+  padding: 18px;
+  border-radius: 12px;
+  margin-bottom: 25px;
+}
+
+.progress-track {
+  height: 10px;
+  background: #e8edf2;
+  border-radius: 20px;
+  overflow: hidden;
+  margin-top: 12px;
+}
+
+.progress-fill {
+  height: 100%;
+  width: 0%;
+  background: #1d9b85;
+  transition: width .3s;
+}
+
+details {
+  background: white;
+  border-radius: 12px;
+  margin-bottom: 12px;
+  border: 1px solid #e3e9ef;
+  overflow: hidden;
+}
+
+summary {
+  list-style: none;
+  cursor: pointer;
+  padding: 19px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  font-weight: bold;
+  color: #23465e;
+}
+
+summary::-webkit-details-marker { display: none; }
+
+summary::after {
+  content: "+";
+  margin-left: auto;
+  font-size: 23px;
+  color: #258c91;
+}
+
+details[open] summary::after { content: "−"; }
+
+.content {
+  padding: 5px 20px 20px;
+  border-top: 1px solid #edf0f4;
+}
+
+.content h4 {
+  color: #287c91;
+  margin-bottom: 8px;
+}
+
+.content p, .content li {
+  font-size: 14px;
+  line-height: 1.7;
+}
+
+.content ul { padding-left: 20px; }
+
+.resource {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 10px;
+  background: #f4f7fa;
+  padding: 12px;
+  border-radius: 8px;
+  margin: 9px 0;
+  font-size: 14px;
+}
+
+.link {
+  color: #147d89;
+  font-weight: bold;
+  text-decoration: none;
+  white-space: nowrap;
+}
+
+.link:hover { text-decoration: underline; }
+
+.task {
+  border-left: 4px solid #e8a43a;
+  padding: 12px;
+  background: #fffaf1;
+  margin: 12px 0;
+  border-radius: 5px;
+}
+
+.session-number {
+  background: #e4f1f4;
+  color: #17677a;
+  border-radius: 7px;
+  padding: 6px 10px;
+}
+
+.check {
+  display: block;
+  padding: 8px 0;
+  font-size: 14px;
+}
+
+.check input { margin-right: 9px; }
+
+.footer {
+  text-align: center;
+  color: #8996a5;
+  font-size: 12px;
+  padding: 25px;
+}
+
+@media(max-width:600px) {
+  .dashboard { padding: 12px; }
+  .hero { padding: 23px; }
+  .hero h1 { font-size: 24px; }
+  summary { padding: 15px; font-size: 14px; }
+}
+</style>
+</head>
+
+<body>
+
+<div class="dashboard">
+
+  <!-- CABEÇALHO -->
+  <header class="hero">
+    <small>PLATAFORMA DE APRENDIZAGEM</small>
+    <h1>UFCD 9978</h1>
+    <h2>Técnicas de Marketing Digital e Gestão de Redes Sociais</h2>
+    <p>
+      Bem-vindo/a à área de aprendizagem.
+      Explora os conteúdos, consulta os recursos didáticos,
+      realiza as atividades e acompanha a tua evolução.
+    </p>
+    <div class="info">
+      <span>⏱ 25 horas</span>
+      <span>💻 E-learning</span>
+      <span>📚 Marketing Digital</span>
+    </div>
+  </header>
+
+  <!-- ÁREAS DE APRENDIZAGEM -->
+  <h2 class="section-title">Áreas de aprendizagem</h2>
+
+  <div class="cards">
+    <div class="card">
+      <div class="emoji">📚</div>
+      <h3>Recursos</h3>
+      <p>Manuais, apresentações e vídeos de apoio.</p>
+    </div>
+
+    <div class="card">
+      <div class="emoji">📝</div>
+      <h3>Tarefas</h3>
+      <p>Exercícios e atividades práticas.</p>
+    </div>
+
+    <div class="card">
+      <div class="emoji">🎯</div>
+      <h3>Sessões</h3>
+      <p>Conteúdos e objetivos de aprendizagem.</p>
+    </div>
+
+    <div class="card">
+      <div class="emoji">🏆</div>
+      <h3>Avaliação</h3>
+      <p>Questionários e atividades de avaliação.</p>
+    </div>
+  </div>
+
+  <!-- PROGRESSO -->
+  <div class="progress-box">
+    <strong>📊 O meu percurso de aprendizagem</strong>
+    <p><span id="percent">0</span>% das atividades concluídas</p>
+    <div class="progress-track">
+      <div class="progress-fill" id="progress"></div>
+    </div>
+  </div>
+
+  <!-- MENU 1 -->
+  <h2 class="section-title">Explorar a formação</h2>
+
+  <details>
+    <summary>📘 01 — Recursos didáticos</summary>
+    <div class="content">
+
+      <h4>Apresentações e manuais</h4>
+
+      <div class="resource">
+        <span>📄 Apresentação — Marketing Digital</span>
+        <a class="link" href="#">Consultar ↗</a>
+      </div>
+
+      <div class="resource">
+        <span>📄 Manual de apoio — Motores de pesquisa</span>
+        <a class="link" href="#">Consultar ↗</a>
+      </div>
+
+      <div class="resource">
+        <span>📄 Manual — SEO e palavras-chave</span>
+        <a class="link" href="#">Consultar ↗</a>
+      </div>
+
+      <h4>Vídeos e materiais complementares</h4>
+
+      <div class="resource">
+        <span>▶ Vídeo — Como funciona o SEO?</span>
+        <a class="link" href="#">Visualizar ↗</a>
+      </div>
+
+      <div class="resource">
+        <span>▶ Vídeo — Estratégias nas redes sociais</span>
+        <a class="link" href="#">Visualizar ↗</a>
+      </div>
+
+      <h4>Leituras complementares</h4>
+      <ul>
+        <li>Marketing de conteúdos.</li>
+        <li>Estratégias de comunicação digital.</li>
+        <li>Métricas e indicadores de desempenho.</li>
+      </ul>
+    </div>
+  </details>
+
+  <!-- MENU 2 -->
+  <details>
+    <summary>📝 02 — Tarefas e atividades práticas</summary>
+    <div class="content">
+
+      <h4>Atividades individuais</h4>
+
+      <div class="task">
+        <strong>Atividade 1 — Pesquisa de palavras-chave</strong>
+        <p>Identifica cinco palavras-chave para promover um produto ou serviço.</p>
+        <a class="link" href="#">Aceder à tarefa ↗</a>
+      </div>
+
+      <div class="task">
+        <strong>Atividade 2 — Análise de redes sociais</strong>
+        <p>Compara duas redes sociais e identifica as suas principais características.</p>
+        <a class="link" href="#">Aceder à tarefa ↗</a>
+      </div>
+
+      <div class="task">
+        <strong>Atividade 3 — Campanha digital</strong>
+        <p>Desenvolve uma proposta de campanha de marketing digital.</p>
+        <a class="link" href="#">Aceder à tarefa ↗</a>
+      </div>
+
+      <h4>Trabalho de grupo</h4>
+      <div class="task">
+        <strong>Projeto — Plano de comunicação digital</strong>
+        <p>Elabora um plano de comunicação para uma marca fictícia.</p>
+        <a class="link" href="#">Submeter trabalho ↗</a>
+      </div>
+
+    </div>
+  </details>
+
+  <!-- MENU 3 -->
+  <details>
+    <summary>🎯 03 — Sessões de formação</summary>
+    <div class="content">
+
+      <p>Seleciona cada sessão para consultar os conteúdos e as atividades.</p>
+
+      <details>
+        <summary><span class="session-number">01</span> Introdução ao Marketing Digital</summary>
+        <div class="content">
+          <h4>Conteúdos</h4>
+          <ul>
+            <li>Conceitos de marketing digital.</li>
+            <li>Marketing tradicional e digital.</li>
+            <li>Estratégias e campanhas digitais.</li>
+          </ul>
+          <h4>Atividade</h4>
+          <p>Identificação de exemplos de campanhas digitais.</p>
+        </div>
+      </details>
+
+      <details>
+        <summary><span class="session-number">02</span> Motores de pesquisa</summary>
+        <div class="content">
+          <h4>Conteúdos</h4>
+          <ul>
+            <li>Funcionamento dos motores de pesquisa.</li>
+            <li>Algoritmos e indexação.</li>
+            <li>Palavras-chave.</li>
+          </ul>
+          <h4>Atividade</h4>
+          <p>Pesquisa e seleção de palavras-chave.</p>
+        </div>
+      </details>
+
+      <details>
+        <summary><span class="session-number">03</span> SEO e Analytics</summary>
+        <div class="content">
+          <h4>Conteúdos</h4>
+          <ul>
+            <li>Search Engine Optimization.</li>
+            <li>Ferramentas de análise SEO.</li>
+            <li>Google Analytics e métricas.</li>
+          </ul>
+          <h4>Atividade</h4>
+          <p>Análise de indicadores de desempenho.</p>
+        </div>
+      </details>
+
+      <details>
+        <summary><span class="session-number">04</span> Blogues e campanhas digitais</summary>
+        <div class="content">
+          <h4>Conteúdos</h4>
+          <ul>
+            <li>Relevância e reputação dos blogues.</li>
+            <li>Campanhas de marketing digital.</li>
+            <li>Conteúdos e comunicação online.</li>
+          </ul>
+          <h4>Atividade</h4>
+          <p>Análise de uma campanha digital.</p>
+        </div>
+      </details>
+
+      <details>
+        <summary><span class="session-number">05</span> Redes sociais e gestão de páginas</summary>
+        <div class="content">
+          <h4>Conteúdos</h4>
+          <ul>
+            <li>Características das redes sociais.</li>
+            <li>Configuração e personalização.</li>
+            <li>Gestão de páginas, grupos e perfis.</li>
+          </ul>
+          <h4>Atividade</h4>
+          <p>Comparação de plataformas sociais.</p>
+        </div>
+      </details>
+
+      <details>
+        <summary><span class="session-number">06</span> Públicos-alvo e interação</summary>
+        <div class="content">
+          <h4>Conteúdos</h4>
+          <ul>
+            <li>Identificação de públicos-alvo.</li>
+            <li>Interação com comunidades.</li>
+            <li>Gestão integrada das redes sociais.</li>
+          </ul>
+          <h4>Atividade</h4>
+          <p>Construção de uma persona digital.</p>
+        </div>
+      </details>
+
+      <details>
+        <summary><span class="session-number">07</span> Automação e marketing social</summary>
+        <div class="content">
+          <h4>Conteúdos</h4>
+          <ul>
+            <li>Ferramentas de automação.</li>
+            <li>Plataformas de marketing social.</li>
+            <li>Planeamento de publicações.</li>
+          </ul>
+          <h4>Atividade</h4>
+          <p>Planeamento de conteúdos para redes sociais.</p>
+        </div>
+      </details>
+
+      <details>
+        <summary><span class="session-number">08</span> Plano de comunicação digital</summary>
+        <div class="content">
+          <h4>Conteúdos</h4>
+          <ul>
+            <li>Plano de marketing digital.</li>
+            <li>Objetivos e estratégias.</li>
+            <li>Medição e avaliação de resultados.</li>
+          </ul>
+          <h4>Atividade</h4>
+          <p>Desenvolvimento de um plano de comunicação digital.</p>
+        </div>
+      </details>
+
+    </div>
+  </details>
+
+  <!-- MENU 4 -->
+  <details>
+    <summary>🏆 04 — Avaliação da aprendizagem</summary>
+    <div class="content">
+
+      <h4>Questionários de conhecimentos</h4>
+
+      <div class="resource">
+        <span>📝 Questionário — Marketing Digital</span>
+        <a class="link" href="#">Iniciar ↗</a>
+      </div>
+
+      <div class="resource">
+        <span>📝 Questionário — SEO e Redes Sociais</span>
+        <a class="link" href="#">Iniciar ↗</a>
+      </div>
+
+      <h4>Avaliação final</h4>
+      <p>Realiza a atividade final de consolidação dos conhecimentos adquiridos.</p>
+      <a class="link" href="#">Aceder à avaliação ↗</a>
+
+    </div>
+  </details>
+
+  <!-- MENU 5 -->
+  <details>
+    <summary>💬 05 — Comunicação e apoio</summary>
+    <div class="content">
+      <h4>Espaço de comunicação</h4>
+      <ul>
+        <li>Fórum de dúvidas.</li>
+        <li>Fórum de partilha de conhecimentos.</li>
+        <li>Informações e avisos da formação.</li>
+        <li>Contacto com o/a formador/a.</li>
+      </ul>
+    </div>
+  </details>
+
+  <!-- CHECKLIST -->
+  <h2 class="section-title">O meu percurso</h2>
+
+  <div class="progress-box">
+    <label class="check">
+      <input type="checkbox" class="done">
+      Consultei os recursos didáticos.
+    </label>
+    <label class="check">
+      <input type="checkbox" class="done">
+      Realizei as tarefas propostas.
+    </label>
+    <label class="check">
+      <input type="checkbox" class="done">
+      Explorei as sessões de formação.
+    </label>
+    <label class="check">
+      <input type="checkbox" class="done">
+      Realizei os questionários.
+    </label>
+    <label class="check">
+      <input type="checkbox" class="done">
+      Concluí a avaliação final.
+    </label>
+  </div>
+
+  <footer class="footer">
+    UFCD 9978 | Técnicas de Marketing Digital e Gestão de Redes Sociais
+    <br>Área de aprendizagem e-learning
+  </footer>
+
+</div>
+
+<script>
+const checks = document.querySelectorAll(".done");
+const progress = document.getElementById("progress");
+const percent = document.getElementById("percent");
+
+function updateProgress() {
+  const total = checks.length;
+  const completed = document.querySelectorAll(".done:checked").length;
+  const value = Math.round((completed / total) * 100);
+
+  progress.style.width = value + "%";
+  percent.textContent = value;
+}
+
+checks.forEach(check => {
+  check.addEventListener("change", updateProgress);
+});
+
+updateProgress();
+</script>
+
+</body>
+</html>
